@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "open-sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+.protest-riot-regular {
+  font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background: #c4d6db;
+}
+h1 {
+  padding-top: 20px;
+  text-align: center;
+  font-family: "Protest Riot", sans-serif;
+  font-size: 3rem;
+  color: #1b635d;
+}
+
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+.lienzo {
+  width: 60vmin;
+  height: 70vmin;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #303a3d;
+  border-radius: 1.5%;
+}
+
+.game-details {
+  color: #b6babb;
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 29px 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.board {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background: #1e2425;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.board .food {
+  background: skyblue;
+}
+
+.board .head {
+  background: green;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+.controls i {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #b6babb;
+  width: calc(100% / 4);
+  cursor: pointer;
+  border-right: 1px solid #1e2425;
+}
+
+@media screen and (max-width: 800px) {
+  .lienzo {
+    width: 90vmin;
+    height: 115vmin;
+  }
+  .game-details {
+    font-size: 1.1rem;
+    padding: 15px 25px;
+  }
+  .controls {
+    display: flex;
+  }
+  .controls i {
+    padding: 17px 0;
+    font-size: 1.1rem;
+  }
+}
